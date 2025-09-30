@@ -1,0 +1,1460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foreign Influence and Comparative Populism: The UK in Context</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background: #000;
+            color: #fff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 40px;
+            min-height: 100vh;
+        }
+
+        .header {
+            border-left: 3px solid #fff;
+            padding-left: 20px;
+            margin-bottom: 60px;
+            animation: slideIn 0.8s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .org-name {
+            font-size: 12px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            opacity: 0.7;
+            margin-bottom: 10px;
+        }
+
+        .doc-type {
+            font-size: 14px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            opacity: 0.5;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: 300;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+            max-width: 800px;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            opacity: 0.8;
+            font-weight: 300;
+        }
+
+        .divider {
+            width: 60px;
+            height: 2px;
+            background: #fff;
+            margin: 40px 0;
+            animation: expandWidth 1s ease-out 0.3s both;
+        }
+
+        @keyframes expandWidth {
+            from { width: 0; }
+            to { width: 60px; }
+        }
+
+        .nav-container {
+            margin-bottom: 60px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .nav-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .nav-btn {
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            padding: 12px 20px;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        .nav-btn:hover, .nav-btn.active {
+            background: #fff;
+            color: #000;
+            border-color: #fff;
+        }
+
+        .section {
+            display: none;
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: 300;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            letter-spacing: -0.5px;
+        }
+
+        .subsection {
+            margin-bottom: 40px;
+        }
+
+        .subsection h3 {
+            font-size: 20px;
+            font-weight: 400;
+            margin-bottom: 20px;
+            color: #fff;
+            opacity: 0.9;
+        }
+
+        .subsection h4 {
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 15px;
+            color: #fff;
+            opacity: 0.8;
+        }
+
+        .content-text {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            opacity: 0.85;
+        }
+
+        .key-judgments {
+            background: rgba(255, 255, 255, 0.05);
+            border-left: 3px solid #fff;
+            padding: 30px;
+            margin: 40px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .key-judgments h3 {
+            font-size: 22px;
+            margin-bottom: 25px;
+            color: #fff;
+        }
+
+        .judgment-item {
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .judgment-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .judgment-title {
+            font-weight: 600;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .likelihood {
+            display: inline-block;
+            padding: 6px 12px;
+            background: rgba(255, 255, 255, 0.2);
+            font-size: 12px;
+            font-weight: 600;
+            margin-top: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .threat-assessment {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 30px;
+            margin: 40px 0;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .threat-level {
+            font-size: 18px;
+            font-weight: 500;
+            margin-top: 15px;
+            color: #fff;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .comparison-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .comparison-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .comparison-card h4 {
+            color: #fff;
+            margin-bottom: 20px;
+            font-size: 18px;
+            text-align: center;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .convergence, .divergence {
+            margin-bottom: 20px;
+        }
+
+        .convergence h5 {
+            color: #fff;
+            font-size: 14px;
+            margin-bottom: 10px;
+            opacity: 0.9;
+        }
+
+        .divergence h5 {
+            color: #fff;
+            font-size: 14px;
+            margin-bottom: 10px;
+            opacity: 0.7;
+        }
+
+        .scenario-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .scenario-card {
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.03);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .scenario-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+
+        .scenario-header {
+            padding: 20px;
+            font-weight: 600;
+            text-align: center;
+            font-size: 16px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+        }
+
+        .scenario-content {
+            padding: 25px;
+        }
+
+        .scenario-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+
+        .recommendations {
+            background: rgba(255, 255, 255, 0.05);
+            border-left: 3px solid #fff;
+            padding: 30px;
+            margin: 40px 0;
+        }
+
+        .recommendations h3 {
+            margin-bottom: 25px;
+            font-size: 22px;
+            color: #fff;
+        }
+
+        .rec-category {
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .rec-category:last-child {
+            border-bottom: none;
+        }
+
+        .rec-category h4 {
+            margin-bottom: 15px;
+            font-size: 18px;
+            color: #fff;
+        }
+
+        .rec-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .rec-list li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+            font-size: 15px;
+            opacity: 0.85;
+        }
+
+        .rec-list li::before {
+            content: '▶';
+            position: absolute;
+            left: 0;
+            color: #fff;
+            opacity: 0.7;
+        }
+
+        .source-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            font-size: 14px;
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .source-table th {
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .source-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            vertical-align: top;
+        }
+
+        .source-table tr:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .reliability-high, .reliability-moderate, .reliability-low {
+            padding: 4px 8px;
+            font-weight: 600;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .reliability-high {
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+        }
+
+        .reliability-moderate {
+            background: rgba(255, 255, 255, 0.15);
+            color: #fff;
+            opacity: 0.8;
+        }
+
+        .reliability-low {
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            opacity: 0.6;
+        }
+
+        .note-box {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 25px;
+            margin: 30px 0;
+        }
+
+        .note-box h4 {
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        .navigation-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .prev-btn, .next-btn {
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            padding: 12px 24px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .prev-btn:hover, .next-btn:hover {
+            background: #fff;
+            color: #000;
+            border-color: #fff;
+        }
+
+        .prev-btn:disabled, .next-btn:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+
+        .section-counter {
+            font-size: 14px;
+            opacity: 0.7;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .footer {
+            margin-top: 100px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+            opacity: 0.6;
+            font-size: 12px;
+            line-height: 1.6;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #fff;
+            color: #000;
+            width: 50px;
+            height: 50px;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            outline: none;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: #000;
+            color: #fff;
+            border: 1px solid #fff;
+            border-color: #000;
+            transform: translateY(-3px);
+            outline: none;
+        }
+
+        .back-to-top:focus {
+            outline: none;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+            opacity: 0.85;
+        }
+
+        ul li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #fff;
+            opacity: 0.7;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 40px 20px;
+            }
+
+            h1 {
+                font-size: 36px;
+            }
+
+            .section-title {
+                font-size: 24px;
+            }
+
+            .comparison-grid, .scenario-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-buttons {
+                justify-content: center;
+            }
+
+            .back-to-top {
+                width: 40px;
+                height: 40px;
+                font-size: 16px;
+            }
+
+            .navigation-controls {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="org-name">IRGIU / CANVI</div>
+            <div class="doc-type">Intelligence Brief / Tier 3</div>
+            <h1>Foreign Influence and Comparative Populism:<br>The UK in Context</h1>
+            <div class="subtitle">Transnational Currents and Democratic Vulnerabilities</div>
+            <div class="divider"></div>
+        </div>
+
+        <div class="nav-container">
+            <div class="nav-buttons">
+                <button class="nav-btn" data-section="0">Summary</button>
+                <button class="nav-btn" data-section="1">Background</button>
+                <button class="nav-btn" data-section="2">U.S. Influence</button>
+                <button class="nav-btn" data-section="3">Israeli Dimensions</button>
+                <button class="nav-btn" data-section="4">European Comparisons</button>
+                <button class="nav-btn" data-section="5">Digital Ecosystems</button>
+                <button class="nav-btn" data-section="6">Scenario Analysis</button>
+                <button class="nav-btn" data-section="7">Recommendations</button>
+                <button class="nav-btn" data-section="8">Source Analysis</button>
+            </div>
+        </div>
+
+        <!-- Section 0: Summary -->
+        <section class="section active" data-section="0">
+            <h2 class="section-title">1. Summary & Key Judgments</h2>
+            
+            <div class="content-text">
+                Britain's populist turn reflects both domestic fault-lines and external influences. While Brexit, migration, and identity politics remain primary drivers, the UK's trajectory is increasingly shaped by transnational currents from the U.S., Israel/pro-Israel advocacy, and European populist movements. The fusion of external pressure with Britain's volatile internal dynamics represents a strategic threat to political stability, minority security, and democratic resilience.
+            </div>
+
+            <div class="key-judgments">
+                <h3>Key Judgments</h3>
+                
+                <div class="judgment-item">
+                    <div class="judgment-title">Britain's populism is now embedded in a transnational ecosystem</div>
+                    <div class="content-text">UK populist actors do not operate in isolation; they are nodes within a global populist network, borrowing rhetoric, tactics, and legitimacy from abroad. This significantly raises Britain's exposure to "imported shocks."</div>
+                    <div class="likelihood">High (75–85%)</div>
+                </div>
+
+                <div class="judgment-item">
+                    <div class="judgment-title">U.S. influence is the dominant external driver</div>
+                    <div class="content-text">MAGA strategies, donor flows, and digital narratives shape UK populist mobilisation, with direct imitation of U.S. culture-war framing. A MAGA resurgence in the 2024–2028 cycle would likely embolden UK actors.</div>
+                    <div class="likelihood">Very High (85–95%)</div>
+                </div>
+
+                <div class="judgment-item">
+                    <div class="judgment-title">Israeli and pro-Israel networks exert targeted but significant influence</div>
+                    <div class="content-text">Their role varies: some push back against antisemitism in populist spaces, while others tactically align with right-wing actors on migration and security. Influence is episodic but carries outsized impact during Middle East crises.</div>
+                    <div class="likelihood">Moderate–High (60–75%)</div>
+                </div>
+
+                <div class="judgment-item">
+                    <div class="judgment-title">European parallels highlight Britain's hybrid vulnerability</div>
+                    <div class="content-text">Whereas populism in France, Germany, and Hungary is institutionally channelled through parties, the UK combines parliamentary, media, and street-level populism. This hybrid model leaves it more porous to external influence.</div>
+                    <div class="likelihood">High (70–80%)</div>
+                </div>
+
+                <div class="judgment-item">
+                    <div class="judgment-title">Digital ecosystems are the primary accelerant</div>
+                    <div class="content-text">Transnational populist memes, protest repertoires, and disinformation spread rapidly via Telegram, TikTok, and X/Twitter. Domestic control mechanisms cannot keep pace with this convergence.</div>
+                    <div class="likelihood">Very High (85–95%)</div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>Global Shocks Will Escalate UK Vulnerabilities</h3>
+                
+                <div class="judgment-item">
+                    <div class="judgment-title">U.S. elections → likely to mainstream MAGA-style politics in UK discourse</div>
+                    <div class="likelihood">High (70–80%)</div>
+                </div>
+
+                <div class="judgment-item">
+                    <div class="judgment-title">Middle East crises → almost certain to trigger UK street mobilisation and populist countermobilisation</div>
+                    <div class="likelihood">Very High (90%+)</div>
+                </div>
+
+                <div class="judgment-item">
+                    <div class="judgment-title">Refugee flows → highly probable to reignite migration-populism nexus</div>
+                    <div class="likelihood">High (75–85%)</div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>UK Resilience Mechanisms Remain Underdeveloped</h3>
+                <div class="content-text">Oversight of foreign funding, counter-disinformation strategy, and cross-border influence monitoring lag the threat environment. Without urgent reform, Britain risks recurring destabilisation cycles.</div>
+                <div class="likelihood">High (75–85%)</div>
+            </div>
+
+            <div class="threat-assessment">
+                <h3>Overall Threat Assessment</h3>
+                <div class="content-text">Britain faces a highly likely (80–90%) trajectory of recurring populist destabilisation episodes driven by the interaction of domestic vulnerabilities and external shocks.</div>
+                <div class="threat-level">The UK is at risk of becoming a case study in Western Europe for how foreign populist currents can erode democratic norms if left unchecked.</div>
+            </div>
+        </section>
+
+        <!-- Section 1: Background -->
+        <section class="section" data-section="1">
+            <h2 class="section-title">2. Background: Brexit & Populism</h2>
+            
+            <div class="content-text">
+                Britain's populist trajectory is inseparable from the Brexit moment. The 2016 referendum acted as both a trigger event and a mobilising framework for populist politics. It reframed national debates around sovereignty, migration, and "the will of the people," offering populist actors a legitimising language that has endured well beyond the referendum itself.
+            </div>
+
+            <div class="subsection">
+                <h3>Brexit's Distinctive Features</h3>
+                
+                <div class="subsection">
+                    <h4>1. Institutional disruption as a political weapon</h4>
+                    <div class="content-text">Brexit was not merely a policy choice; it was a constitutional rupture. Populist leaders such as Nigel Farage and Boris Johnson leveraged the referendum to cast Parliament, the judiciary, and even civil servants as obstacles to the "people's will." This delegitimisation of institutions remains central to UK populist discourse.</div>
+                </div>
+
+                <div class="subsection">
+                    <h4>2. Migration as a unifying grievance</h4>
+                    <div class="content-text">Concerns over EU free movement were fused with anxieties about asylum seekers and broader demographic change. The Leave campaign's emphasis on "taking back control" of borders provided a narrative frame that continues to anchor populist mobilisation.</div>
+                </div>
+
+                <div class="subsection">
+                    <h4>3. Permanent mobilisation beyond the ballot box</h4>
+                    <div class="content-text">Unlike many European cases, Brexit did not end with a single referendum victory. Instead, it created a long tail of mobilisation: repeated parliamentary crises, mass protests, and street demonstrations by both pro- and anti-Brexit factions.</div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>Post-Brexit Populist Streams</h3>
+                <ul>
+                    <li><strong>Institutional populism:</strong> Actors such as Reform UK position themselves as outsiders challenging the political establishment, framing mainstream parties as betrayers of Brexit's promise.</li>
+                    <li><strong>Street populism:</strong> Figures like Tommy Robinson sustain mobilisation through rallies, digital channels, and direct confrontation politics, particularly around Islam, migration, and national identity.</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3>The Hybrid Model</h3>
+                <div class="content-text">This dual structure creates a hybrid populist model that is distinct in Europe. In France or Germany, populism tends to be funnelled through party systems. In Hungary and Poland, populism consolidates within ruling parties. In Britain, by contrast, populism retains a permanent insurgent character: it sits both within and outside formal politics.</div>
+            </div>
+
+            <div class="subsection">
+                <h3>Post-Brexit Legacy Threats</h3>
+                <div class="content-text">Brexit did not resolve the political, cultural, or economic divisions it exposed. Instead, it institutionalised them. Northern Ireland's unsettled status, ongoing trade frictions with the EU, and enduring debates over sovereignty provide continuing entry points for populist exploitation. Populists invoke Brexit as an unfinished revolution, arguing that elites have diluted or betrayed its promise. This unresolved legacy functions as a standing grievance structure: a ready-made narrative through which new shocks — from migration surges to economic downturns — can be reframed as proof that the "Brexit spirit" has yet to be honoured.</div>
+            </div>
+
+            <div class="subsection">
+                <h3>Brexit's Symbolic Power Beyond Britain's Borders</h3>
+                <div class="content-text">Brexit's symbolic power extends well beyond Britain's borders. Across Europe, right-wing parties from France's Rassemblement National to Poland's Law and Justice (PiS) invoke Brexit as proof that entrenched elites and supranational structures can be defeated. In the United States, the slogan "Brexit then Trump" captured the transatlantic resonance of the moment, binding two political shocks into a single populist narrative. Even in regions as far as Latin America, Brexit has been referenced as a case study in popular sovereignty trumping globalist governance.</div>
+                
+                <div class="content-text">This symbolic export means that Britain's populist rupture is not only a domestic legacy but also a transnational resource. UK populism is continually fed back into global populist discourse, reinforcing Britain's role as both a test case and a reference point. The danger is that Brexit becomes cyclical fuel: external actors cite it to legitimise their own projects, while UK populists borrow that external validation to argue that their cause remains global, righteous, and unfinished.</div>
+            </div>
+        </section>
+
+        <!-- Section 2: U.S. Influence -->
+        <section class="section" data-section="2">
+            <h2 class="section-title">3. U.S. Influence (MAGA Strategies, Donor Flows)</h2>
+            
+            <div class="content-text">
+                The United States represents the single most consequential external influence on Britain's populist trajectory. The ideological, financial, and digital infrastructure of the American populist right — crystallised around the Trump-era "Make America Great Again" (MAGA) movement — has been selectively imported into the UK.
+            </div>
+
+            <div class="subsection">
+                <h3>Strategy Transfer: The "MAGA Playbook" in Britain</h3>
+                <ul>
+                    <li><strong>Culture-war framing:</strong> Narratives around "woke elites," gender debates, and free speech battles mirror U.S. Republican talking points almost verbatim.</li>
+                    <li><strong>Spectacle politics:</strong> The aesthetics of MAGA rallies — flags, slogans, leader-centric imagery — are replicated in British populist events.</li>
+                    <li><strong>Electoral insurgency:</strong> The "outsider versus establishment" trope has been central to both Trump and Reform UK.</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3>Donor Flows and Financial Ecosystems</h3>
+                <div class="content-text">While difficult to track with precision, transatlantic funding linkages between U.S. conservative networks and UK populist organisations operate through:</div>
+                <ul>
+                    <li>Think tanks and lobbying entities sharing personnel, strategy documents, and funding streams</li>
+                    <li>Private donors with dual UK–U.S. ties providing discreet financial transfers</li>
+                    <li>Issue-based alliances attracting joint fundraising across climate scepticism, anti-migration advocacy, and free-speech causes</li>
+                </ul>
+                <div class="content-text">These flows remain opaque due to weaknesses in the UK's political funding oversight framework. Foreign-linked money can enter through third-party NGOs, dark-money PACs, or donor-advised funds with little scrutiny.</div>
+            </div>
+
+            <div class="subsection">
+                <h3>Digital Convergence</h3>
+                <div class="content-text">Perhaps the most potent U.S. influence arises from the shared digital ecosystem:</div>
+                <ul>
+                    <li><strong>Platform dominance:</strong> U.S.-based platforms (X/Twitter, Facebook, YouTube) dominate the UK information space</li>
+                    <li><strong>Algorithmic spillover:</strong> Viral MAGA content enters UK feeds seamlessly, often adapted with minimal localisation</li>
+                    <li><strong>Cross-activist synergy:</strong> UK and U.S. influencers frequently interact online, creating shared struggle narratives</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3>Risks and Implications</h3>
+                <div class="content-text">The U.S. populist influence carries three primary risks for Britain:</div>
+                
+                <div class="subsection">
+                    <h4>1. Normalisation of radical tactics</h4>
+                    <div class="content-text">Events such as the 6 January 2021 Capitol attack serve as templates for how populists may contest electoral outcomes. UK populist actors openly reference these precedents, raising the risk of domestic institutional challenges in a future political crisis.</div>
+                </div>
+
+                <div class="subsection">
+                    <h4>2. Funding opacity</h4>
+                    <div class="content-text">Without stricter transparency rules, UK politics may serve as a conduit for foreign capital, distorting electoral competition and policy debates.</div>
+                </div>
+
+                <div class="subsection">
+                    <h4>3. Narrative dependency</h4>
+                    <div class="content-text">The reliance on U.S. culture-war framing risks displacing domestic debates with imported conflicts, making Britain more reactive to U.S. political cycles than to its own context.</div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>Post-2024 U.S. Elections Outlook</h3>
+                <div class="content-text">The trajectory of U.S. politics in the 2024–2028 cycle will heavily shape UK populism:</div>
+                
+                <div class="scenario-grid">
+                    <div class="scenario-card">
+                        <div class="scenario-header">Scenario 1: Trump/MAGA Victory</div>
+                        <div class="scenario-content">
+                            <div class="content-text">A Republican resurgence would embolden UK populists, legitimising their narratives and providing renewed tactical inspiration. Transatlantic activist networks would intensify, with U.S. actors actively exporting strategies and money into the UK. The risk of Britain becoming a subsidiary theatre of MAGA populism would increase substantially.</div>
+                            <div class="scenario-meta">
+                                <span>Risk Level:</span>
+                                <span class="likelihood">Very High</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="scenario-card">
+                        <div class="scenario-header">Scenario 2: Democratic Containment</div>
+                        <div class="scenario-content">
+                            <div class="content-text">A Biden (or Democratic successor) victory would not eliminate U.S. influence but could weaken its intensity. MAGA-aligned networks would remain active online, but without the imprimatur of power, their UK resonance may plateau. However, containment could paradoxically reinforce the persecution narrative among UK populists, who frame themselves as fighting a global liberal elite.</div>
+                            <div class="scenario-meta">
+                                <span>Risk Level:</span>
+                                <span class="likelihood">Moderate</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="scenario-card">
+                        <div class="scenario-header">Scenario 3: Polarised Deadlock</div>
+                        <div class="scenario-content">
+                            <div class="content-text">If American politics descends into institutional gridlock or disputed elections, the UK will feel the aftershocks. Populists in Britain could seize on U.S. instability to argue that democracy itself is failing, legitimising calls for radical alternatives at home.</div>
+                            <div class="scenario-meta">
+                                <span>Risk Level:</span>
+                                <span class="likelihood">High</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-text" style="margin-top: 25px;"><strong>Implication:</strong> Regardless of electoral outcome, U.S. politics will remain a structural driver of UK populist dynamics. The question is not whether U.S. populism will influence Britain, but how strongly and through what channels.</div>
+            </div>
+        </section>
+
+        <!-- Section 3: Israeli Dimensions -->
+        <section class="section" data-section="3">
+            <h2 class="section-title">4. Israeli/Hasbara Dimensions</h2>
+            
+            <div class="content-text">
+                Israeli and pro-Israel networks represent a subtler but strategically significant dimension of external influence on Britain's populist trajectory. Unlike U.S. populism, which is loud and highly visible, Israeli-linked influence is more targeted, episodic, and issue-specific.
+            </div>
+
+            <div class="subsection">
+                <h3>Hasbara and Advocacy Infrastructure</h3>
+                <div class="content-text">The term Hasbara ("explanation") refers to Israel's official and semi-official public diplomacy efforts. In the UK, this translates into:</div>
+                <ul>
+                    <li>Messaging campaigns emphasising Israel's security concerns and delegitimising criticism as antisemitic</li>
+                    <li>Advocacy networks including lobbying groups, student networks, and community forums</li>
+                    <li>Rapid response mobilisation during crises leveraging relationships with media outlets and politicians</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3>Political Intersections with UK Populism</h3>
+                
+                <div class="subsection">
+                    <h4>Convergences</h4>
+                    <ul>
+                        <li>Antisemitism debates providing opportunities for right-wing populists to portray themselves as defenders of Jewish communities</li>
+                        <li>Counter-Islam narratives creating tactical alignments between pro-Israel voices and anti-Muslim populist movements</li>
+                        <li>Conservative party alliances reinforcing pro-Israel narratives into mainstream and fringe discourse</li>
+                    </ul>
+                </div>
+
+                <div class="subsection">
+                    <h4>Tensions</h4>
+                    <ul>
+                        <li>Far-right antisemitism continuing to host conspiracy theories targeting Jews</li>
+                        <li>Community divisions within the UK Jewish community regarding populist alignment</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>The Gaza Effect and Mobilisation Risks</h3>
+                <div class="content-text">Middle East crises act as flashpoints for both pro-Israel advocacy and populist counter-mobilisation in Britain. During escalations in Gaza, UK streets witness simultaneous pro-Palestinian mass mobilisations and pro-Israel advocacy campaigns. These parallel dynamics feed populist polarisation:</div>
+                <ul>
+                    <li>Right-wing populists exploit pro-Palestinian protests to warn of "uncontrolled migration" and "disloyal minorities"</li>
+                    <li>Left populists frame pro-Israel advocacy as elite manipulation and use it to fuel anti-establishment critiques</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3>Risk Outlook</h3>
+                <div class="content-text">Looking ahead, several potential triggers could elevate Israeli/Hasbara-linked influence in the UK populist space:</div>
+                
+                <div class="subsection">
+                    <h4>Gaza escalation</h4>
+                    <div class="content-text">Renewed large-scale conflict would almost certainly provoke mass demonstrations in Britain, creating fertile ground for both right-wing populists (framing protests as threats to national cohesion) and left populists (amplifying anti-elite, anti-Israel rhetoric).</div>
+                </div>
+
+                <div class="subsection">
+                    <h4>Iran confrontation</h4>
+                    <div class="content-text">A U.S.-Israeli conflict with Iran would likely polarise UK opinion sharply, pulling populists into framing Britain's alliances as either complicit in "globalist wars" or weak in defending Western security.</div>
+                </div>
+
+                <div class="subsection">
+                    <h4>Domestic antisemitism incidents</h4>
+                    <div class="content-text">A high-profile attack on Jewish targets or figures could accelerate both pro-Israel advocacy and counter-mobilisation, forcing populist actors to stake positions that further polarise communities.</div>
+                </div>
+
+                <div class="subsection">
+                    <h4>Legislative flashpoints</h4>
+                    <div class="content-text">Proposals around banning Boycott, Divestment and Sanctions (BDS) movements, regulating protests, or enhancing antisemitism definitions would provide populists with mobilisation opportunities, feeding both alignment and confrontation with pro-Israel networks.</div>
+                </div>
+
+                <div class="content-text" style="margin-top: 25px;"><strong>Implication:</strong> Israeli-linked influence in UK populism is unlikely to become dominant, but it acts as a recurring catalyst. By sharpening polarisation at moments of crisis, it can trigger disproportionate ripple effects across British politics, reinforcing the hybrid populist model of street agitation plus parliamentary disruption.</div>
+            </div>
+        </section>
+
+        <!-- Section 4: European Comparisons -->
+        <section class="section" data-section="4">
+            <h2 class="section-title">5. European Comparisons</h2>
+            
+            <div class="content-text">
+                Britain's populist trajectory cannot be fully assessed without situating it against the wider European populist landscape. Cross-comparisons reveal both shared structural drivers and unique vulnerabilities.
+            </div>
+
+            <div class="comparison-grid">
+                <div class="comparison-card">
+                    <h4>France – Rassemblement National (NR)</h4>
+                    <div class="convergence">
+                        <h5>Convergence with UK</h5>
+                        <div class="content-text">Both NR and UK populists anchor mobilisation on migration, Islam, and sovereignty. Both rely on charismatic figureheads.</div>
+                    </div>
+                    <div class="divergence">
+                        <h5>Divergence</h5>
+                        <div class="content-text">Unlike Britain's hybrid street–institutional populism, NR operates almost entirely within electoral channels.</div>
+                    </div>
+                </div>
+
+                <div class="comparison-card">
+                    <h4>Germany – Alternative für Deutschland (AfD)</h4>
+                    <div class="convergence">
+                        <h5>Convergence with UK</h5>
+                        <div class="content-text">Like UK movements, AfD thrives on anti-migrant narratives and digital mobilisation, borrowing from transnational conspiracy cultures.</div>
+                    </div>
+                    <div class="divergence">
+                        <h5>Divergence</h5>
+                        <div class="content-text">Germany's constitutional framework constrains street activism. State surveillance reduces permeability between digital radicalism and physical mobilisation.</div>
+                    </div>
+                </div>
+
+                <div class="comparison-card">
+                    <h4>Poland – Law and Justice (PiS)</h4>
+                    <div class="convergence">
+                        <h5>Convergence with UK</h5>
+                        <div class="content-text">Both PiS and UK populists emphasise sovereignty, portraying Brussels as an external enemy undermining national independence.</div>
+                    </div>
+                    <div class="divergence">
+                        <h5>Divergence</h5>
+                        <div class="content-text">Britain's populism has not consolidated into long-term governing dominance. Populist currents remain insurgent.</div>
+                    </div>
+                </div>
+
+                <div class="comparison-card">
+                    <h4>Hungary – Fidesz</h4>
+                    <div class="convergence">
+                        <h5>Convergence with UK</h5>
+                        <div class="content-text">Orbán's rhetoric on borders, migration, and cultural sovereignty resonates strongly with UK populists, who frequently cite Hungary as a model.</div>
+                    </div>
+                    <div class="divergence">
+                        <h5>Divergence</h5>
+                        <div class="content-text">British populists operate in a pluralistic environment with stronger opposition and civil society resilience, preventing state capture.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>Britain's Hybrid Distinctiveness</h3>
+                <div class="content-text">These European comparisons highlight Britain's unique position:</div>
+                <ul>
+                    <li>Unlike NR and AfD, Britain fuses institutional insurgency with street mobilisation, making it more volatile</li>
+                    <li>Unlike PiS and Fidesz, British populists have not secured structural dominance over state institutions</li>
+                    <li>Britain's populism sits between opposition and power, drawing legitimacy from both transnational echoes and its own Brexit rupture</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3>European Cross-Pollination</h3>
+                <div class="content-text">UK populists and their continental counterparts engage in a steady exchange of tactics, narratives, and validation:</div>
+                <ul>
+                    <li><strong>Tactical borrowing:</strong> British activists adopt protest repertoires pioneered in Europe while European populists borrow Britain's Brexit language</li>
+                    <li><strong>Narrative reinforcement:</strong> Orbán frequently references Brexit to argue for national sovereignty, while Farage praises Hungary and Poland as examples of "real independence"</li>
+                    <li><strong>Networked alliances:</strong> Cross-European conferences, social media interactions, and EU-parliamentary blocs provide coordination spaces</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Section 5: Digital Ecosystems -->
+        <section class="section" data-section="5">
+            <h2 class="section-title">6. Digital Ecosystems & Transnational Narratives</h2>
+            
+            <div class="content-text">
+                The digital domain is the primary accelerator of populism's transnational spread. While migration, sovereignty, and cultural anxieties remain local triggers, it is online ecosystems that knit these grievances into a shared global narrative.
+            </div>
+
+            <div class="subsection">
+                <h3>Platform Dependence</h3>
+                <div class="content-text">UK populist discourse is overwhelmingly mediated through U.S.-based platforms (X/Twitter, Facebook, YouTube, TikTok), ensuring that:</div>
+                <ul>
+                    <li>American narratives spill over seamlessly into UK feeds</li>
+                    <li>Algorithmic amplification rewards polarisation, pushing populist actors to escalate rhetoric</li>
+                    <li>Control levers are external, limiting UK authorities' regulatory responses</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3>Digital Convergence Patterns</h3>
+                
+                <div class="subsection">
+                    <h4>Cross-Border Influencer Networks</h4>
+                    <div class="content-text">British figures like Nigel Farage and Tommy Robinson interact directly with U.S. and European populists online, creating a sense of transatlantic solidarity.</div>
+                    
+                    <h4>Shared Memes and Repertoires</h4>
+                    <div class="content-text">Imagery such as "take back control" or "invasion" circulates with minimal localisation, becoming part of a universal populist lexicon.</div>
+                    
+                    <h4>Conspiracy Convergence</h4>
+                    <div class="content-text">Narratives about "globalist elites," the Great Replacement, or election fraud migrate easily across borders, adapted only slightly for national context.</div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>Digital Counter-Mobilisation</h3>
+                <div class="content-text">The same networks that empower populists also fuel counter-populist activism:</div>
+                <ul>
+                    <li>Pro-Palestinian movements mobilise mass demonstrations in Britain via digital channels</li>
+                    <li>Antifascist networks use the same platforms to expose and disrupt populist mobilisation</li>
+                </ul>
+                <div class="content-text">This creates a mirror effect: UK populism and its opponents both operate in transnational digital spheres, reinforcing polarisation.</div>
+            </div>
+
+            <div class="subsection">
+                <h3>Narratives Without Borders</h3>
+                <div class="content-text">Digital ecosystems allow foreign events to become domestic flashpoints:</div>
+                <ul>
+                    <li>A U.S. school shooting can trigger debates on Britain's "culture war"</li>
+                    <li>A French protest can become a model for UK street action</li>
+                    <li>An Israeli–Palestinian escalation translates instantly into mass mobilisation on British streets</li>
+                </ul>
+                <div class="content-text">In each case, the speed of narrative transfer collapses the distance between foreign crises and UK domestic politics, eroding the state's ability to manage agenda-setting.</div>
+            </div>
+        </section>
+
+        <!-- Section 6: Scenario Analysis -->
+        <section class="section" data-section="6">
+            <h2 class="section-title">7. Scenario Analysis: Global Shocks & UK Futures</h2>
+            
+            <div class="content-text">
+                Britain's populist trajectory will be shaped by global shocks that interact with the UK's existing hybrid populist model. Three categories of external events stand out as most consequential.
+            </div>
+
+            <div class="scenario-grid">
+                <div class="scenario-card">
+                    <div class="scenario-header">U.S. Elections & Political Cycles</div>
+                    <div class="scenario-content">
+                        <div class="scenario-meta">
+                            <span><strong>Trigger:</strong></span>
+                            <span>Trump/MAGA victory or disputed election</span>
+                        </div>
+                        <div class="content-text"><strong>UK Impact:</strong> British populists will frame U.S. outcomes as validation of their narratives or evidence of democratic collapse. Either scenario provides fertile ground for escalation.</div>
+                        <div class="scenario-meta">
+                            <span><strong>Likelihood:</strong></span>
+                            <span class="likelihood">High (75–85%)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="scenario-card">
+                    <div class="scenario-header">Middle East Crises</div>
+                    <div class="scenario-content">
+                        <div class="scenario-meta">
+                            <span><strong>Trigger:</strong></span>
+                            <span>Gaza escalation, Iran confrontation, regional instability</span>
+                        </div>
+                        <div class="content-text"><strong>UK Impact:</strong> Almost certainly trigger mass mobilisations in Britain. Right-wing populists exploit these to warn of "disloyal minorities" while left populists frame pro-Israel advocacy as elite manipulation.</div>
+                        <div class="scenario-meta">
+                            <span><strong>Likelihood:</strong></span>
+                            <span class="likelihood">Very High (85–95%)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="scenario-card">
+                    <div class="scenario-header">Refugee & Migration Flows</div>
+                    <div class="scenario-content">
+                        <div class="scenario-meta">
+                            <span><strong>Trigger:</strong></span>
+                            <span>Large-scale migration surges from conflict or climate</span>
+                        </div>
+                        <div class="content-text"><strong>UK Impact:</strong> Migration remains the most potent grievance in UK populist repertoire. Any visible increase could serve as immediate mobilisation trigger, framed as sovereignty issue.</div>
+                        <div class="scenario-meta">
+                            <span><strong>Likelihood:</strong></span>
+                            <span class="likelihood">High (75–85%)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="scenario-card">
+                    <div class="scenario-header">European Populist Gains</div>
+                    <div class="scenario-content">
+                        <div class="scenario-meta">
+                            <span><strong>Trigger:</strong></span>
+                            <span>NR, AfD, or Fidesz electoral surges</span>
+                        </div>
+                        <div class="content-text"><strong>UK Impact:</strong> Would provide narrative reinforcement for British populists, framing themselves as part of wider European awakening. Symbolic power strengthens UK populist legitimacy.</div>
+                        <div class="scenario-meta">
+                            <span><strong>Likelihood:</strong></span>
+                            <span class="likelihood">Moderate–High (60–75%)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>Domestic Institutional Crises</h3>
+                <div class="content-text"><strong>Trigger:</strong> A hung parliament, contested general election, or constitutional dispute (e.g., Scottish independence, Northern Ireland Protocol).</div>
+                <div class="content-text"><strong>UK Impact:</strong> Populists thrive in institutional deadlock, framing it as proof that elites cannot govern. In such a scenario, both Reform UK and street populist movements would escalate claims to represent the "real people."</div>
+                <div class="content-text"><strong>Likelihood:</strong> Moderate (50–65%) in the short term, but High (70–80%) over the medium term (5–10 years).</div>
+            </div>
+
+            <div class="threat-assessment">
+                <h3>Overall Scenario Assessment</h3>
+                <div class="content-text">The UK is highly likely (80–90%) to face recurrent populist escalation driven by global shocks within the next electoral cycle.</div>
+                <div class="threat-level">Most immediate risks stem from Middle East crises and refugee flows, while U.S. political outcomes will shape the strategic orientation of British populism.</div>
+            </div>
+        </section>
+
+        <!-- Section 7: Recommendations -->
+        <section class="section" data-section="7">
+            <h2 class="section-title">8. Recommendations: Resilience, Counter-Disinformation, Foreign Funding Oversight</h2>
+            
+            <div class="content-text">
+                Mitigating the risks of transnational populism requires a multi-layered response. Britain cannot insulate itself from global shocks, but it can reduce its vulnerability by strengthening regulatory, institutional, and civic resilience.
+            </div>
+
+            <div class="recommendations">
+                <h3>Strategic Recommendations</h3>
+                
+                <div class="rec-category">
+                    <h4>Strengthening Democratic Resilience</h4>
+                    <ul class="rec-list">
+                        <li>Institutional Preparedness: Parliament, judiciary, and electoral bodies should develop contingency planning for populist attempts to delegitimise authority</li>
+                        <li>Political Funding Transparency: Close loopholes allowing foreign-linked money to enter politics via third-party NGOs</li>
+                        <li>Party Governance Standards: Political parties should adopt stricter codes on foreign support</li>
+                    </ul>
+                </div>
+
+                <div class="rec-category">
+                    <h4>Counter-Disinformation and Digital Oversight</h4>
+                    <ul class="rec-list">
+                        <li>Platform Accountability: Strengthen cooperation with U.S.-based platforms, demanding transparency on algorithmic amplification</li>
+                        <li>Digital Literacy Initiatives: Expand critical media education to reduce susceptibility to imported conspiracy theories</li>
+                        <li>Rapid Response Units: Establish joint government–civil society monitoring hubs for faster disinformation identification</li>
+                    </ul>
+                </div>
+
+                <div class="rec-category">
+                    <h4>Civil Society and Community Resilience</h4>
+                    <ul class="rec-list">
+                        <li>Cross-Community Dialogue: Support initiatives bringing together minority communities to reduce Middle East crisis polarisation</li>
+                        <li>Grassroots Monitoring: Resource NGOs to track foreign influence at street level</li>
+                        <li>Resilience in Protest Management: Adapt police responses to simultaneous mass mobilisations</li>
+                    </ul>
+                </div>
+
+                <div class="rec-category">
+                    <h4>International Cooperation</h4>
+                    <ul class="rec-list">
+                        <li>Shared Intelligence: Deepen collaboration with partners to identify cross-border funding networks</li>
+                        <li>Comparative Lessons: Study European cases for effective countermeasures and risks to anticipate</li>
+                        <li>Normative Leadership: Position Britain as leader in developing democratic resilience frameworks</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="note-box">
+                <h4>Critical Implementation Note</h4>
+                <div class="content-text">The UK cannot eliminate external drivers of populism, but it can harden itself against exploitation. Strengthening transparency, digital governance, and community resilience will reduce the ease with which foreign shocks become domestic crises. Absent these measures, Britain risks remaining one of the most permeable democracies in Europe — vulnerable to external populist currents and trapped in cycles of destabilisation.</div>
+            </div>
+        </section>
+
+        <!-- Section 8: Source Analysis -->
+        <section class="section" data-section="8">
+            <h2 class="section-title">9. Annex A: OSINT Source Reliability Assessment</h2>
+            
+            <table class="source-table">
+                <thead>
+                    <tr>
+                        <th>Source Category</th>
+                        <th>Examples</th>
+                        <th>Reliability</th>
+                        <th>Notes / Caveats</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Government & Institutional Data</td>
+                        <td>UK Home Office statistics, Electoral Commission reports, EU Parliament debates</td>
+                        <td><span class="reliability-high">High</span></td>
+                        <td>Generally reliable and methodologically transparent, but may reflect political framing. Cross-verification required for sensitive issues.</td>
+                    </tr>
+                    <tr>
+                        <td>Mainstream Media (UK/International)</td>
+                        <td>BBC, Financial Times, Guardian, Times, New York Times, Le Monde</td>
+                        <td><span class="reliability-high">High–Moderate</span></td>
+                        <td>Fact-checked, but editorial lines can influence framing. Useful for event verification, less so for motive attribution.</td>
+                    </tr>
+                    <tr>
+                        <td>NGOs & Watchdogs</td>
+                        <td>Hope Not Hate, ISD, Community Security Trust, Policy Exchange</td>
+                        <td><span class="reliability-moderate">Moderate–High</span></td>
+                        <td>Provide granular insights. Methodology often robust, but funding and political alignment can bias scope.</td>
+                    </tr>
+                    <tr>
+                        <td>Academic Research & Think Tanks</td>
+                        <td>Chatham House, LSE, Oxford Migration Studies, Brookings</td>
+                        <td><span class="reliability-high">High</span></td>
+                        <td>Peer-reviewed or policy-oriented. Strong for structural analysis, though sometimes slower to capture fast-moving events.</td>
+                    </tr>
+                    <tr>
+                        <td>Populist Movements & Influencers</td>
+                        <td>Speeches, Telegram channels, YouTube livestreams, party manifestos</td>
+                        <td><span class="reliability-moderate">Moderate–Low</span></td>
+                        <td>Essential for tracking narratives but highly partisan. Requires triangulation with independent reporting.</td>
+                    </tr>
+                    <tr>
+                        <td>Digital OSINT & Social Media Monitoring</td>
+                        <td>CrowdTangle, Graphika, Bellingcat, EUvsDisinfo</td>
+                        <td><span class="reliability-moderate">Moderate</span></td>
+                        <td>Valuable for tracking disinformation flows and bot networks. Reliability depends on analytic transparency.</td>
+                    </tr>
+                    <tr>
+                        <td>Foreign Media (U.S./Israeli/European)</td>
+                        <td>Fox News, Breitbart, RT, i24 News, Haaretz, France 24</td>
+                        <td><span class="reliability-moderate">Variable</span></td>
+                        <td>Insight into external narrative framing. U.S. right-wing outlets and state-affiliated media require caution due to bias.</td>
+                    </tr>
+                    <tr>
+                        <td>Human Intelligence / Informal Networks</td>
+                        <td>Testimony from insiders, activist leaks, diaspora reporting</td>
+                        <td><span class="reliability-low">Low–Unverified</span></td>
+                        <td>May provide unique insights unavailable elsewhere. Reliability inconsistent, motives often opaque. Must be flagged as unverified.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="note-box">
+                <h4>Methodology Note</h4>
+                <div class="content-text">This Annex provides structured overview of OSINT source reliability relevant to populism monitoring. Ratings reflect confidence in accuracy and objectivity, not information value. Even low-reliability sources (e.g., populist Telegram channels) remain essential for mapping narratives, provided they are contextualised within higher-confidence reporting.</div>
+            </div>
+
+            <div style="margin-top: 60px;">
+                <h2 class="section-title">10. Annex B: RAG Dashboard — UK Populism in Global Context</h2>
+                
+                <div class="note-box">
+                    <h4>Purpose</h4>
+                    <div class="content-text">Provide a high-level, colour-coded assessment of transnational populist risks facing the UK. Indicators selected for their relevance to external influence, mobilisation pathways, and domestic vulnerabilities.</div>
+                </div>
+
+                <table class="source-table" style="margin-top: 30px;">
+                    <thead>
+                        <tr>
+                            <th>Indicator</th>
+                            <th>Current Assessment</th>
+                            <th>Trajectory</th>
+                            <th>RAG</th>
+                            <th>Trigger Thresholds (Red escalation)</th>
+                            <th>Scenario Relevance</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Digital contagion of foreign narratives</strong></td>
+                            <td>High penetration of U.S. election rhetoric, Gaza frames, and French "replacement" memes into UK discourse</td>
+                            <td>Increasing frequency; imported within hours</td>
+                            <td><span style="display: inline-flex; align-items: center; gap: 8px;"><span style="width: 16px; height: 16px; border-radius: 50%; background: #e74c3c; display: inline-block;"></span>Red</span></td>
+                            <td>≥3 major foreign flashpoints in a year producing UK mobilisation</td>
+                            <td>Sections 6.1–6.4; Section 7.1–7.2</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Middle East crises driving UK mobilisation</strong></td>
+                            <td>>300,000 protesters in London during Gaza escalations; spikes in antisemitic & anti-Muslim hate</td>
+                            <td>Recurrent, intensifying</td>
+                            <td><span style="display: inline-flex; align-items: center; gap: 8px;"><span style="width: 16px; height: 16px; border-radius: 50%; background: #e74c3c; display: inline-block;"></span>Red</span></td>
+                            <td>Dual mass protests + >50% rise in hate incidents within 30 days</td>
+                            <td>Section 7.2; Section 8.3</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Migration shocks / "small-boat" crossings</strong></td>
+                            <td>Persistent grievance frame; Channel crossings politicised daily</td>
+                            <td>Stable but high</td>
+                            <td><span style="display: inline-flex; align-items: center; gap: 8px;"><span style="width: 16px; height: 16px; border-radius: 50%; background: #e67e22; display: inline-block;"></span>Amber–Red</span></td>
+                            <td>Sustained >25% YoY increase; >3k arrivals in a single month</td>
+                            <td>Section 7.3; Section 8.3</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Electoral legitimacy challenges (U.S. spillover)</strong></td>
+                            <td>Stop-the-Steal frames adopted in UK digital spaces</td>
+                            <td>Rising in salience ahead of next UK election</td>
+                            <td><span style="display: inline-flex; align-items: center; gap: 8px;"><span style="width: 16px; height: 16px; border-radius: 50%; background: #f39c12; display: inline-block;"></span>Amber</span></td>
+                            <td>Coordinated UK campaign alleging election fraud; violent mobilisation</td>
+                            <td>Section 7.1; Section 8.2</td>
+                        </tr>
+                        <tr>
+                            <td><strong>European populist gains (RN, AfD, Fidesz)</strong></td>
+                            <td>UK populists citing continental successes as validation</td>
+                            <td>Stable to increasing</td>
+                            <td><span style="display: inline-flex; align-items: center; gap: 8px;"><span style="width: 16px; height: 16px; border-radius: 50%; background: #f1c40f; display: inline-block;"></span>Amber–Green</span></td>
+                            <td>Two or more major EU states elect populist-led governments</td>
+                            <td>Section 7.4; Section 8.5</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Domestic institutional resilience (Parliament, Courts)</strong></td>
+                            <td>Institutions intact but repeatedly delegitimised</td>
+                            <td>Vulnerability persists during crises</td>
+                            <td><span style="display: inline-flex; align-items: center; gap: 8px;"><span style="width: 16px; height: 16px; border-radius: 50%; background: #f39c12; display: inline-block;"></span>Amber</span></td>
+                            <td>Hung parliament or major Supreme Court ruling triggering mass protest</td>
+                            <td>Section 7.5; Section 8.2</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Community cohesion / hate-crime spiral</strong></td>
+                            <td>Record antisemitic & anti-Muslim incidents during Gaza 2023</td>
+                            <td>Intensifying with each foreign conflict</td>
+                            <td><span style="display: inline-flex; align-items: center; gap: 8px;"><span style="width: 16px; height: 16px; border-radius: 50%; background: #e74c3c; display: inline-block;"></span>Red</span></td>
+                            <td>>30% increase in hate crimes quarter-on-quarter</td>
+                            <td>Section 8.3</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Regulatory capability (Online Safety Act)</strong></td>
+                            <td>Lagging EU counterparts (DSA); limited systemic oversight</td>
+                            <td>Slow progress; vulnerable to next global shock</td>
+                            <td><span style="display: inline-flex; align-items: center; gap: 8px;"><span style="width: 16px; height: 16px; border-radius: 50%; background: #f39c12; display: inline-block;"></span>Amber</span></td>
+                            <td>Failure to operationalise risk audits before 2026</td>
+                            <td>Section 6.5; Section 8.4</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="note-box" style="margin-top: 30px;">
+                    <h4>Overall Assessment</h4>
+                    <ul style="list-style-type: disc; margin-left: 20px;">
+                        <li><strong style="color: #e74c3c;">Red Zone:</strong> Middle East flashpoints, digital contagion, and community polarisation. These represent <strong>acute, recurrent risks</strong> with very high likelihood and severity.</li>
+                        <li><strong style="color: #f39c12;">Amber Zone:</strong> Migration flows, electoral legitimacy crises, institutional resilience, regulatory gaps. These are <strong>chronic vulnerabilities</strong> that escalate sharply during external shocks.</li>
+                        <li><strong style="color: #f1c40f;">Green–Amber Zone:</strong> European populist gains. Symbolically important but less likely to trigger direct UK destabilisation.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="navigation-controls">
+            <button class="prev-btn" id="prevBtn" disabled>
+                <span>←</span> Previous
+            </button>
+            <div class="section-counter">
+                <span id="currentSection">1</span> of <span id="totalSections">9</span>
+            </div>
+            <button class="next-btn" id="nextBtn">
+                Next <span>→</span>
+            </button>
+        </div>
+
+        <div class="footer">
+            <div>This document, produced by the International Relations and Geopolitical Intelligence Unit (IRGIU) of CANVI, is for informational purposes only, intended for use by CANVI and authorised entities. The content is derived from a global network of government and ex-government officials, military and ex-military personnel, intelligence, diplomats, corporations, companies, and other confidential sources.</div>
+            <div style="margin-top: 20px;">© 2025 INTERNATIONAL RELATIONS AND GEOPOLITICAL INTELLIGENCE UNIT (IRGIU) OF CANVI</div>
+            <div style="margin-top: 10px;">RESTRICTED</div>
+        </div>
+
+        <button class="back-to-top" id="scrollToTop">↑</button>
+    </div>
+
+    <script>
+        let currentSectionIndex = 0;
+        const sections = document.querySelectorAll('.section');
+        const navBtns = document.querySelectorAll('.nav-btn');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const currentSectionSpan = document.getElementById('currentSection');
+        const totalSectionsSpan = document.getElementById('totalSections');
+
+        totalSectionsSpan.textContent = sections.length;
+
+        function showSection(index) {
+            // Hide all sections
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Remove active class from all nav buttons
+            navBtns.forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            // Show current section
+            sections[index].classList.add('active');
+            navBtns[index].classList.add('active');
+
+            // Update counter
+            currentSectionSpan.textContent = index + 1;
+
+            // Update navigation buttons
+            prevBtn.disabled = index === 0;
+            nextBtn.disabled = index === sections.length - 1;
+
+            // Reset scroll position
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            currentSectionIndex = index;
+        }
+
+        // Navigation button clicks
+        navBtns.forEach((btn, index) => {
+            btn.addEventListener('click', () => {
+                showSection(index);
+            });
+        });
+
+        // Previous/Next button clicks
+        prevBtn.addEventListener('click', () => {
+            if (currentSectionIndex > 0) {
+                showSection(currentSectionIndex - 1);
+            }
+        });
+
+        nextBtn.addEventListener('click', () => {
+            if (currentSectionIndex < sections.length - 1) {
+                showSection(currentSectionIndex + 1);
+            }
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft' && currentSectionIndex > 0) {
+                showSection(currentSectionIndex - 1);
+            } else if (e.key === 'ArrowRight' && currentSectionIndex < sections.length - 1) {
+                showSection(currentSectionIndex + 1);
+            }
+        });
+
+        // Back to top button
+        const scrollToTopBtn = document.getElementById('scrollToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.classList.add('visible');
+            } else {
+                scrollToTopBtn.classList.remove('visible');
+            }
+        });
+
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Initialize
+        showSection(0);
+    </script>
+</body>
+</html>
