@@ -19,6 +19,29 @@
             line-height: 1.6;
             overflow-x: hidden;
         }
+        .back-to-toc {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            opacity: 0.7;
+            margin-bottom: 40px;
+            transition: all 0.3s ease;
+        }
+
+        .back-to-toc:hover {
+            opacity: 1;
+            transform: translateX(-5px);
+        }
+
+        .back-to-toc::before {
+            content: '←';
+            font-size: 18px;
+        }
 
         .container {
             max-width: 1200px;
@@ -580,6 +603,8 @@
     </style>
 </head>
 <body>
+     <div class="container">
+        <a href="https://irgiu.github.io/Table-of-Contents/" class="back-to-toc">Back to Contents</a>
     <div class="container">
         <div class="header">
             <div class="org-name">IRGIU / CANVI</div>
